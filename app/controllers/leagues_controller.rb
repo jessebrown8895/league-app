@@ -1,21 +1,18 @@
 class LeaguesController < ApplicationController
-
-  # GET: /leagues
-  get "/leagues" do
-
-  end
-
-  # POST: /leagues
-  post "/leagues" do
     
+  # GET: /leagues
+  get "/league" do
+    League.all.to_json
   end
 
   # GET: /leagues/5
   get "/leagues/:id" do
   
   end
-
-
+  # POST: /leagues
+  post "/leagues/new" do
+    
+  end
   # PATCH: /leagues/5
   patch "/leagues/:id" do
    

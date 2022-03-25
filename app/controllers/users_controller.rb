@@ -1,13 +1,19 @@
+
 class UsersController < ApplicationController
 
   # GET: /users
   get "/users" do
-    
+    User.all.to_json
   end
 
   # POST: /users
   post "/users" do
-    
+    user = User.new(params)
+    if user.save
+      user.to_json
+    else 
+      user.errors.full_messages.to_sentence
+    end
   end
 
   # GET: /users/5
