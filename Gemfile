@@ -13,6 +13,7 @@ gem 'tux'
 gem 'faker'
 gem 'rack-cors'
 gem 'rack-contrib'
+gem 'rerun'
 
 
 group :test do
