@@ -18,8 +18,8 @@ puts "Seeding the data"
 #     t.integer "league_id"
 #     t.index ["league_id"], name: "index_users_on_league_id"
 #   end
-    User.create(email: "jdbrown@yahoo.com", name: "Jesse", username: 'jdbrown', password: "password1", league_id: 1)
-    User.create(email: "Mtb@yahoo.com", name: "Matteo", username: 'mtonna', password: "password2", league_id: 1)
-    User.create(email: "Nina@yahoo.com", name: "Nurina", username: 'ninaaaa', password: "password3", league_id: 1)
-    User.create(email: "jni@yahoo.com",  name: "Jeni", username: 'JNIIII', password: "password4", league_id: 1)
+    User.create(email: "jdbrown@yahoo.com", name: "Jesse", nickname: 'jess', league_id: 1)
+    User.create(email: "Mtb@yahoo.com", name: "Matteo", nickname: 'Matteo',  league_id: 1)
+    User.create(email: "Nina@yahoo.com", name: "Nurina", nickname: 'Nina', league_id: 1)
+    User.create(email: "jni@yahoo.com",  name: "Jeni", nickname: 'JNIIII',  league_id: 1)
 puts "🌱 Done seeding!"
