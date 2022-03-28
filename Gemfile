@@ -14,6 +14,7 @@ gem 'faker'
 gem 'rack-cors'
 gem 'rack-contrib'
 gem 'rerun'
+gem 'activerecord-reset-pk-sequence'
 
 
 group :test do

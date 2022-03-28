@@ -8,11 +8,11 @@ class UsersController < ApplicationController
 
   # POST: /users
   post "/users" do
-    user = User.new(params)
-    if user.save
+    user = User.create(params)
+    if user.valid?
       user.to_json
     else 
-      user.errors.full_messages.to_sentence
+      puts "not valid info" # user.errors.full_messages.to_sentence
     end
   end
 
@@ -27,7 +27,9 @@ class UsersController < ApplicationController
   end
 
   # DELETE: /users/5/delete
-  delete "/users/:id/delete" do
-    
+  delete "/users/:id" do
+    users = User.find(params[:id])
+    users.destroy
+    users.to_json
   end
 end
