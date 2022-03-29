@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if user.valid?
       user.to_json
     else 
-      puts "not valid info" # user.errors.full_messages.to_sentence
+      user.errors.full_messages.to_sentence
     end
   end
 
