@@ -7,6 +7,7 @@ ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
+# do we need to require the application_controller since it is within app
 
 require './app/controllers/application_controller'
 require_all 'app'

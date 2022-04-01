@@ -16,14 +16,16 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET: /users/5
-  get "/users/:id" do
-
-  end
-
-  # PATCH: /users/5
+    # PATCH: /users/5
   patch "/users/:id" do
-    
+    user = User.find_by_id(params["id"])
+    if user && user.update(params)
+      user.to_jsson
+    elsif !user
+      {errors: "Record not found with id #{params['id']}"}.to_json
+    else 
+      user.errors.full_messages.to_sentence
+    end
   end
 
   # DELETE: /users/5/delete

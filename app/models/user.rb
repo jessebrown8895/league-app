@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
     validates :nickname, presence: true, length: {in: 3..15}
     validates :name, :league_id, presence: true 
     validates :level, presence: true, inclusion: { in: ["Beginner", "Intermediate", "Advanced"], message: "Not a valid level" }
+    
 end

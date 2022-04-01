@@ -13,7 +13,6 @@ end
 
 use Rack::JSONBodyParser
 run ApplicationController
-use LeaguesController
 use UsersController 
 
 
