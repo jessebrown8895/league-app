@@ -9,7 +9,7 @@ request that will removes a player from the league.
 
 ## Installation 
 
-Download th repo from git hub, run bundle install to install the 
+Fork and clone the repo from git hub, run bundle install to install the 
 all of the gems, then run bundle exec rake server to run the program.
 
 ## link to the front-end
