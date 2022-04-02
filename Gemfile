@@ -15,7 +15,7 @@ gem 'rack-cors'
 gem 'rack-contrib'
 gem 'rerun'
 gem 'activerecord-reset-pk-sequence'
-
+gem 'pry'
 
 group :test do
   gem 'rspec'

@@ -12,6 +12,8 @@ League.reset_pk_sequence
 #     t.datetime "updated_at", null: false
 #   end
     kickball = League.create( sport: "Kickball", day: "Tuesday", time: "7:30 PM" )
+    kickball = League.create( sport: "Basketball", day: "Tuesday", time: "7:30 PM" )
+    kickball = League.create( sport: "Baseball", day: "Tuesday", time: "7:30 PM" )
 #   create_table "users", force: :cascade do |t|
 #     t.string "email"
 #     t.string "username"

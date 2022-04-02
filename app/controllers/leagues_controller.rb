@@ -2,7 +2,7 @@ class LeaguesController < ApplicationController
     
   # GET: /leagues
   get "/league" do
-    
+    League.all.to_json
   end
 
   # GET: /leagues/5

@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 2022_03_14_183420) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "league_id"
-    t.index ["league_id"], name: "index_users_on_league_id"
+    t.integer "sport_id"
+    t.integer "league_id", default: 1
   end
 
 end

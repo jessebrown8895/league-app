@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   patch "/users/:id" do
     user = User.find_by_id(params["id"])
     if user && user.update(params)
-      user.to_jsson
+      user.to_json
     elsif !user
       {errors: "Record not found with id #{params['id']}"}.to_json
     else 

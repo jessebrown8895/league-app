@@ -8,6 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.timestamps null: false
       # t.belongs_to :league, default: 1
       t.integer :league_id, default: 1
+      
     end
   end
 end
