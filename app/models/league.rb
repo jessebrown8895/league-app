@@ -3,4 +3,7 @@ class League < ActiveRecord::Base
 
     validates :sport, :day, :time, presence: true
     
+    def self.most_users
+        League.all.max_by{|league| league.users.length}
+    end 
 end

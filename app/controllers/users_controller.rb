@@ -8,11 +8,16 @@ class UsersController < ApplicationController
 
   # POST: /users
   post "/users" do
-    user = User.create(params)
-    if user.valid?
-      user.to_json
+    league = League.find_by_sport(params[:sport])
+    if league 
+      user = league.users.create(params)
+      if user.valid?
+        user.to_json
+      else 
+        user.errors.full_messages.to_sentence
+      end
     else 
-      user.errors.full_messages.to_sentence
+      "League does not exist"
     end
   end
 

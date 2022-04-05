@@ -1,10 +1,15 @@
 class LeaguesController < ApplicationController
     
   # GET: /leagues
-  get "/league" do
+  get "/leagues" do
     League.all.to_json
   end
-
+  
+  get "/most-users" do
+    most_users = League.most_users
+    most_users.to_json
+  end
+  
   # GET: /leagues/5
   get "/leagues/:id" do
   
